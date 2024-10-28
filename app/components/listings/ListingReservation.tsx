@@ -149,22 +149,37 @@ const ListingReservation: React.FC<ListingReservationProps> = ({
                       selectedTime &&
                         isSameMinute(selectedTime, hour) &&
                         'bg-emerald-600 text-white',
-                      isDisabled && 'bg-gray-400 cursor-not-allowed'
+                      isDisabled && 'bg-rose-400 cursor-not-allowed'
                     )}
                     onClick={() => handleTimeClick(hour)}
                   >
                     {format(hour, 'HH:mm')}
                   </button>
+                 
                 </div>
               );
             })}
           </div>
         </div>
       </div>
+      <div className="flex items-center space-x-4">
+  
+  <div className="flex items-center space-x-2 ml-10">
+    <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+    <span>Available</span>
+  </div>
+  
+  
+  <div className="flex items-center space-x-2">
+    <div className="w-4 h-4 bg-red-500 rounded-full"></div>
+    <span>Unavailable</span>
+  </div>
+</div>
+
       <hr />
       <div className="flex flex-col p-2">
         <div className="px-2 flex flex-row items-center justify-between font-semibold text-sm ">
-          <div>Tax(2%)</div>
+          <div>Gst & Tax(2%)</div>
           <div>₹{taxPrice.toFixed(2)}</div>
         </div>
         <div className="px-2 flex flex-row items-center justify-between font-semibold text-sm ">
