@@ -29,7 +29,7 @@ const Home = async ({ searchParams }: HomeProps) => {
  
   const reservations = await getReservations({ userId: currentUser?.id });
  
-    const listing = await getListing({ listingId: currentUser?.id });
+ 
     
  
   if (listings.length === 0) {
