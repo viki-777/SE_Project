@@ -87,7 +87,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
           {data.title}
         </div>
         <div className=" text-sm flex gap-2">
-          <CiLocationOn size={15} /> {location?.label}, {location?.region}
+          <CiLocationOn size={15} /> {data.featureTwo}, {location?.label}
         </div>
         <div className="flex  flex-row items-center gap-1">
           <div className="font-bold text-lg border rounded-full px-2 bg-green-200"> ₹{price}</div>

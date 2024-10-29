@@ -143,9 +143,11 @@ const Categories = () => {
     <div className=" bg-slate-200 sm:block hidden border rounded-xl px-10">
        
       <div className="flex w-full items-center justify-center gap-20  list-none py-4">
-      <div className='text-black flex px-4 py-2 border rounded-full bg-white border-gray-950'>
-        <Image className="" src={expore} alt="logo" width={20} height={20} />
-          <div className='pl-2 font-semibold'> Explore</div>
+      <div className="hidden lg:flex text-black px-4 py-2 border
+       rounded-full bg-white border-gray-950"
+      >
+        <Image className="hidden lg:block" src={expore} alt="logo" width={20} height={20} />
+          <div className='hidden lg:block pl-2 font-semibold'> Explore</div>
       </div>
         {menu.map((men, index) => {
           const depthLevel = 0;

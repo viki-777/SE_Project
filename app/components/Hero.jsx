@@ -5,7 +5,7 @@ import Book from '@/public/images/BookApp.png';
 
 const Hero = () => {
   return (
-    <div className='md:flex items-center justify-between  pb-7 max-w-5xl mx-auto'>
+    <div className='md:flex items-center  pb-7 max-w-5xl mx-15'>
       {/* Hero Left Side */}
       <div className='flex flex-col'>
         <h2 className='font-bold text-[46px] sm:text-left '>

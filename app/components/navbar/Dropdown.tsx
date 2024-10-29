@@ -23,7 +23,9 @@ const Dropdown: React.FC<DropdownProps> = ({
 
   return (
     <ul
-      className={` shadow-lg dropdown hidden bg-white border-none rounded-md overflow-hidden  list-none min-w-[12rem]  text-left absolute left-0  top-[1.6rem] text-normal   ${dropdownClass} ${
+      className={` shadow-lg dropdown hidden bg-white border-none rounded-md overflow-hidden 
+         list-none min-w-[12rem]  text-left absolute left-0 
+          top-[1.6rem] text-normal   ${dropdownClass} ${
         dropdown ? 'show' : ''
       }`}
     >

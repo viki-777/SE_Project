@@ -48,9 +48,13 @@ const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
             height="50"
             width="50"
             alt="Logo"
-          />Appoint.com
+          />
+          <div className='lg:block'>
+
+          Appoint.com
+          </div>
         </div>
-        <div className="hidden sm:block">
+        <div className="hidden lg:block">
           {/* Conditionally render Search on larger screens */}
           <Search />
         </div>

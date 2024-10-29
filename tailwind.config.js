@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      primary:'emarand-500',
+      primary:'emerald-500',
       backgroundImage: {
         
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

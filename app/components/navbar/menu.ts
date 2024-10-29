@@ -2,7 +2,7 @@ export const menu = [
   
   
   {
-    title: 'Health & Fitness',
+    title: 'Fitness',
     url: '',
     submenu: [
       
@@ -127,7 +127,7 @@ export const menu = [
     ],
   },
   {
-    title: 'Beauty & Spa',
+    title: 'Salons',
     url: '',
     submenu: [
       {

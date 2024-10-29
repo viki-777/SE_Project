@@ -126,7 +126,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
             text-sm
           "
         >
-          <div className="flex flex-col cursor-pointer z-10">
+          <div className="flex flex-col cursor-pointer z-50">
             {currentUser ? (
               <>
                 <MenuBox

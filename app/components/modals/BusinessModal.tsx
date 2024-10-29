@@ -165,13 +165,13 @@ const BusinessModal = () => {
     bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading
-          title="Share some details about your business"
-          subtitle="What features do you provide?"
+          title="Share Full address details of your business"
+          subtitle="Where are you located?"
         />
         <div className="flex flex-row justify-between gap-2">
           <Input
             id="featureOne"
-            label="Benefit 1"
+            label="Full Address"
             disabled={isLoading}
             register={register}
             errors={errors}
@@ -179,7 +179,7 @@ const BusinessModal = () => {
           />
           <Input
             id="featureTwo"
-            label="Benefit 2"
+            label="City"
             disabled={isLoading}
             register={register}
             errors={errors}
