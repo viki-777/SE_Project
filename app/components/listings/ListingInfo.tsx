@@ -6,7 +6,7 @@ import { IconType } from 'react-icons';
 import Avatar from '../Avatar';
 import { SafeUser } from '@/app/types';
 import ListingCategory from './ListingCategory';
-
+import CustomerReviews from './CustomerReviews';
 const Map = dynamic(() => import('../Map'), { ssr: false });
 
 interface ListingInfoProps {
@@ -78,6 +78,8 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
       )}
       <hr />
       <Map center={coordinates} />
+      <hr />
+      <CustomerReviews/>
     </div>
   );
 };

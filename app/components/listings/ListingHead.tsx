@@ -5,6 +5,7 @@ import { SafeListing, SafeUser } from '@/app/types';
 import Image from 'next/image';
 import { IconType } from 'react-icons';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
+import { AiFillStar } from 'react-icons/ai';
 
 interface ListingHeadProps {
   title: string;
@@ -40,11 +41,11 @@ const ListingHead: React.FC<ListingHeadProps> = ({
   if (mins) {
     showMins = +mins[0] * 60 + +mins[1];
   }
-
+  
   return (
     <>
       <div className="grid sm:grid-cols-2 border-none grid-cols-1  overflow-hidden relative h-auto sm:h-auto shadow-xl sm:min-h-[550px] min-h-[800px]  bg-gray-900">
-        <div className="flex order-last sm:order-first flex-col h-auto py-12 sm:py-20 pl-8 sm:pl-24">
+        <div className="flex order-last sm:order-first flex-col h-auto py-12 sm:py-20 pl-8 sm:pl-24 px-4">
           <div className="text-white font-bold text-4xl">{listing.title}</div>
           <div className="text-white font-bold">By {user.name}</div>
           {/* <div className="text-white font-semibold text-md">{`~ ${
@@ -71,6 +72,12 @@ const ListingHead: React.FC<ListingHeadProps> = ({
               {listing.featureTwo}
             </div>
           </div> */}
+          <div>
+            <div>
+
+          
+            </div>
+          </div>
         </div>
         <div className="w-full h-full  order-first sm:order-last relative sm:overflow-hidden">
           <Image

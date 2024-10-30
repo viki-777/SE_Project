@@ -9,7 +9,7 @@ import { useCallback, useMemo } from 'react';
 import { format } from 'date-fns';
 import HeartButton from '../HeartButton';
 import Button from '../Button';
-
+import { AiFillStar } from 'react-icons/ai';
 interface ListingCardProps {
   data: SafeListing;
   reservation?: SafeReservation;
@@ -76,6 +76,17 @@ const ListingCard: React.FC<ListingCardProps> = ({
             className="h-full w-full object-cover group-hover:scale-110 transition"
             fill
           />
+          <div className="absolute bottom-1 left-1">
+            <div className="px-2 flex items-center gap-1 text-sm font-semibold border rounded-full bg-white">
+              
+              <span className=" font-semibold text-sm">
+                {/* {data.rating.toFixed(1)} */}
+               { Math.floor(Math.random() * (5 - 3 + 1)) + 3}  
+              </span>
+              <AiFillStar size={15} color='green' />
+            |  {Math.floor(Math.random() * (500 - 50 + 1)) + 50}
+            </div>
+          </div>
           <div className="absolute top-3 right-3">
             <HeartButton listingId={data.id} currentUser={currentUser} />
           </div>

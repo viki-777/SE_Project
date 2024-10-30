@@ -18,6 +18,7 @@ import Hero from '@/app/components/Hero';
 import noAppointment from '@/public/images/plan.png';
 import getFavoriteListings from './actions/getFavourites';
 import getListing from './actions/getListingbyID';
+
 interface HomeProps {
   searchParams: IListingsParams;
 }
@@ -26,7 +27,7 @@ const Home = async ({ searchParams }: HomeProps) => {
   const listings = await getListings(searchParams);
   const currentUser = await getCurrentUser();
   const fav = await getFavoriteListings();
- 
+  const listing = await getListing({ listingId: currentUser?.id });
   const reservations = await getReservations({ userId: currentUser?.id });
  
  
@@ -109,11 +110,11 @@ const Home = async ({ searchParams }: HomeProps) => {
                   </div>
               
               <div className="text-sm space-y-4 overflow-y-auto max-h-52 no-scrollbar">
-              {fav.length > 0 && currentUser ? (
-                      fav.map((favorite) => (
-                        <div key={favorite.id} className="border-b p-2 mb-2 bg-emerald-100 border rounded-lg hover:border-emerald-600">
-                          <p className="font-semibold">{favorite.title}</p>
-                          <p className="text-gray-500">{favorite.category}</p>
+              {listing && currentUser ? (
+                      fav.map((listing) => (
+                        <div key={listing.id} className="border-b p-2 mb-2 bg-emerald-100 border rounded-lg hover:border-emerald-600">
+                          <p className="font-semibold">{listing.title}</p>
+                          <p className="text-gray-500">{listing.category}</p>
                         </div>
                       ))
                     ) : (
