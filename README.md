@@ -45,7 +45,7 @@ To install and set up the Appointment Booking System, follow these steps:
 
 ## Tech Stack
 
-- **Next.js13:** A React framework for building server-side rendered and statically generated web applications.
+- **Next.js:** A React framework for building server-side rendered and statically generated web applications.
 - **React:** A JavaScript library for building user interfaces.
 - **TypeScript:** A statically typed superset of JavaScript that enhances code quality and maintainability.
 - **MongoDB:** A NoSQL database used to store application data.

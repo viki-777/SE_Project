@@ -83,7 +83,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
             cursor-pointer
           "
         >
-          Your Bussiness
+          Create Bussiness
         </div>
         <div
           onClick={toggleOpen}
@@ -124,6 +124,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
             right-0 
             top-12 
             text-sm
+            z-50
           "
         >
           <div className="flex flex-col cursor-pointer z-50">
@@ -138,7 +139,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                   onClick={() => router.push('/favorites')}
                 />
                 <MenuBox
-                  label="My reservations"
+                  label="My Bookings"
                   onClick={() => router.push('/reservations')}
                 />
                 <MenuBox

@@ -27,7 +27,16 @@ const Home = async ({ searchParams }: HomeProps) => {
   const listings = await getListings(searchParams);
   const currentUser = await getCurrentUser();
   const fav = await getFavoriteListings();
-  const listing = await getListing({ listingId: currentUser?.id });
+  let listing = null;
+  if(currentUser){
+    
+    listing = await getListing({ listingId: currentUser?.id });
+  }
+
+  // if(currentUser){
+
+  //   const listing = await getListing({ listingId: currentUser?.id });
+  // }
   const reservations = await getReservations({ userId: currentUser?.id });
  
  
@@ -46,7 +55,8 @@ const Home = async ({ searchParams }: HomeProps) => {
       <Container>
         <div className="flex flex-col md:flex-row gap-8 pt-20">
           
-        <div>
+        <div className="hidden md:block">
+
  
                 {/* Appointments Section */}
                 <div className="bg-slate-100 text-emerald-500 p-4 h-72 rounded-lg shadow-md mb-6">
@@ -110,22 +120,13 @@ const Home = async ({ searchParams }: HomeProps) => {
                   </div>
               
               <div className="text-sm space-y-4 overflow-y-auto max-h-52 no-scrollbar">
-              {listing && currentUser ? (
-                      fav.map((listing) => (
-                        <div key={listing.id} className="border-b p-2 mb-2 bg-emerald-100 border rounded-lg hover:border-emerald-600">
-                          <p className="font-semibold">{listing.title}</p>
-                          <p className="text-gray-500">{listing.category}</p>
-                        </div>
-                      ))
-                    ) : (
-                      <div>
-                        <p>No favorites added yet.</p>
-                      </div>
-                    )}
+                 <div>
+                   There is no business.
+                 </div>
               </div>
             </div>
 
-            </div>         
+          </div>         
 
                   
           {/* Right side: Listings Grid */}
