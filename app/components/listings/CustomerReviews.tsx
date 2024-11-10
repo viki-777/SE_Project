@@ -4,11 +4,11 @@ const CustomerReviews: React.FC = () => {
   const totalReviews = (Math.random() * 500 + 1).toFixed(0);
   const averageRating = parseFloat((Math.random() * 4 + 1).toFixed(1));
   const ratingDistribution = [
-    { stars: 5, percentage: 56 },
-    { stars: 4, percentage: 19 },
-    { stars: 3, percentage: 12 },
-    { stars: 2, percentage: 7 },
-    { stars: 1, percentage: 6 },
+    { stars: 5, percentage: (Math.random() * 80 + 1).toFixed(0) },
+    { stars: 4, percentage:(Math.random() * 20 + 1).toFixed(0) },
+    { stars: 3, percentage: (Math.random() * 4 + 1).toFixed(0) },
+    { stars: 2, percentage: (Math.random() * 3 + 1).toFixed(0) },
+    { stars: 1, percentage: (Math.random() * 2 + 1).toFixed(0) },
   ];
 
   // Function to generate star icons based on the average rating

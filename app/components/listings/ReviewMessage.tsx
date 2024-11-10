@@ -34,24 +34,8 @@ const ReviewSection = () => {
       rating: 4,
       comment: "Great service, very professional and friendly!",
     },
-    {
-      id: 2,
-      name: "parth",
-      rating: 5,
-      comment: "Amazing experience, highly recommend!",
-    },
-    {
-      id: 4,
-      name: "ayush",
-      rating: 3,
-      comment: "Good service but could be improved in some areas.",
-    },
-    {
-      id: 5,
-      name: "anish",
-      rating: 4,
-      comment: "Great service, very professional and friendly!",
-    },
+   
+   
     {
       id: 6,
       name: "Prabhat",
@@ -64,12 +48,7 @@ const ReviewSection = () => {
       rating: 3,
       comment: "Good service but could be improved in some areas.",
     },
-    {
-      id: 8,
-      name: "rohan",
-      rating: 4,
-      comment: "Great service, very professional and friendly!",
-    },
+  
     {
       id:  19,
       name: "ajay",
@@ -77,17 +56,13 @@ const ReviewSection = () => {
       comment: "Amazing experience, highly recommend!",
     },
     {
-      id: 10,
-      name: "priyanshu",
-      rating: 3,
-      comment: "Good service but could be improved in some areas.",
+      id: 5,
+      name: "sahitthi",
+      rating: 4,
+      comment: "very professional and friendly!",
     },
-    {
-      id: 30,
-      name: "piyush",
-      rating: 3,
-      comment: "Good service but could be improved in some areas.",
-    },
+  
+  
   ];
 
   return (

@@ -60,6 +60,7 @@ model Listing {
   price Int
   featureOne String?
   featureTwo String?
+  rating Int?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
   reservations Reservation[]

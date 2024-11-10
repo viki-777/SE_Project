@@ -27,16 +27,9 @@ const Home = async ({ searchParams }: HomeProps) => {
   const listings = await getListings(searchParams);
   const currentUser = await getCurrentUser();
   const fav = await getFavoriteListings();
-  let listing = null;
-  if(currentUser){
-    
-    listing = await getListing({ listingId: currentUser?.id });
-  }
-
-  // if(currentUser){
-
-  //   const listing = await getListing({ listingId: currentUser?.id });
-  // }
+  
+  const listing = await getListings({  userId: currentUser?.id });
+  
   const reservations = await getReservations({ userId: currentUser?.id });
  
  
@@ -95,9 +88,9 @@ const Home = async ({ searchParams }: HomeProps) => {
                     <Image className="w-10 h-10 object-cover" src={favorite} alt="calendar" />
                     <h1 className="text-2xl font-bold mb-4">Your Favorites</h1>
                   </div>
-                  
+                  <Link href="/favorites">
                   <div className="text-sm space-y-4 overflow-y-auto max-h-52 no-scrollbar">
-                    {fav.length > 0 && currentUser ? (
+                    {listing.length > 0 && currentUser ? (
                       fav.map((favorite) => (
                         <div key={favorite.id} className="border-b p-2 mb-2 bg-emerald-100 border rounded-lg hover:border-emerald-600">
                           <p className="font-semibold">{favorite.title}</p>
@@ -110,22 +103,34 @@ const Home = async ({ searchParams }: HomeProps) => {
                       </div>
                     )}
                   </div>
+                  </Link>
                 </div>
 
             {/* Recent Listings Section */}
             <div className="bg-slate-100 text-emerald-500 p-4 h-72 rounded-lg shadow-md">
-            <div className="flex gap-1 mb-3">
+                  <div className="flex gap-1 mb-3">
                     <Image className="w-10 h-10 object-cover" src={yourBusiness} alt="yourBusiness" />
                     <h1 className="text-2xl font-bold mb-4">Your Buisness</h1>
                   </div>
+                  <Link href="/business">
+                  <div className="text-sm space-y-4 overflow-y-auto max-h-52 no-scrollbar">
+                    {listing.length > 0 && currentUser ? (
+                      listing.map((favorite) => (
+                        <div key={favorite.id} className="border-b p-2 mb-2 bg-emerald-100 border rounded-lg hover:border-emerald-600">
+                          <p className="font-semibold">{favorite.title}</p>
+                          <p className="text-gray-500">{favorite.category}</p>
+                        </div>
+                      ))
+                    ) : (
+                      <div>
+                        <p>No buisness.</p>
+                      </div>
+                    )}
+                  </div>
               
-              <div className="text-sm space-y-4 overflow-y-auto max-h-52 no-scrollbar">
-                 <div>
-                   There is no business.
-                 </div>
-              </div>
+                  </Link>  
             </div>
-
+            
           </div>         
 
                   
@@ -151,3 +156,4 @@ const Home = async ({ searchParams }: HomeProps) => {
 };
 
 export default Home;
+

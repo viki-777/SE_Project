@@ -60,7 +60,7 @@ export const categories = [
     icon: GrYoga,
     description: 'Zumba',
   },
-  { label: 'Gp s', icon: RiPsychotherapyFill, description: 'Therapy' },
+  { label: 'Dermatologist', icon: RiPsychotherapyFill, description: 'Therapy' },
   { label: 'Dentists', icon: TbDental, description: 'Dentists' },
   {
     label: 'Dental Surgery',
@@ -93,7 +93,7 @@ export const categories = [
 
   { label: 'Movers', icon: MdOutlineMan3, description: 'Movers' },
   {
-    label: 'Cleaing Service',
+    label: 'Cleaning Service',
     icon: MdCleaningServices,
     description: 'Cleaing Service',
   },
